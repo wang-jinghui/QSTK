@@ -22,6 +22,7 @@ import datetime as dt
 import qstkutil.DataAccess as da
 import qstkutil.qsdateutil as du
 
+# index : datetime
 def calcavg(period):
 	sum = zeros(len(period.columns))
 	count=0
@@ -39,6 +40,8 @@ def calcdev(period):
 		count+=1
 	return(sqrt(devs/count))
 
+# little confusion
+# TODO parameters info
 def calcbvals(adjclose, timestamps, stocks, lookback):
 	for i in adjclose.values:
 		if i == 'NaN':
